@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Bohdan Pidkovych](https://up.htmlacademy.ru/htmlcss/26/user/537017).
-* Наставник: `Неизвестно`.
+* Наставник: [Удовенко Марина] (https://htmlacademy.ru/profile/id7570).
 
 ---
 
