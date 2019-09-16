@@ -22,7 +22,51 @@
       <h1>Поиск гостинницы в Седоне</h1>
       <section>
         <h2>Фильтр поиска</h2>
-        <!-- Place for form -->
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="pool" id="filter-pool" checked>
+                <label for="filter-pool">бассейн</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parking" id="filter-parking">
+                <label for="filter-parking">парковка</label>
+              </li>
+              <li>
+                <input type="checkbox" name="wifi" id="filter-wifi">
+                <label for="filter-wifi">wi-fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="hotel" id="filter-hotel" checked>
+                <label for="filter-hotel">гостиница</label>
+              </li>
+              <li>
+                <input type="checkbox" name="motel" id="filter-motel" checked>
+                <label for="filter-motel">мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="appartment" id="filter-appartment" checked>
+                <label for="filter-appartment">апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <p>стоимость в сутки (р):</p>
+          <p>
+            <label>от<input type="text" name="min-price" value="0"></label>
+            <label>до<input type="text" name="max-price" value="3000"></label>
+          </p>
+          <div>
+            <input type="range" name="filter-price-range">
+          </div>
+          <button type="submit">показать</button>
+        </form>
       </section>
       <section>
         <h2>Панель управления результатами поиска</h2>
