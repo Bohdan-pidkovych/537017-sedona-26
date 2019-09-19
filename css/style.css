@@ -29,3 +29,350 @@ a {
 .site-navigation a {
     color: #000000;
 }
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+    color: #81b3d2;
+}
+
+.site-navigation a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.site-navigation-current {
+    color: #766357;
+}
+
+.main-intro {
+    background-color: #acd5ee;
+    background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
+    background-position: center 100%, center 0;
+    background-repeat: no-repeat, no-repeat;
+    background-size:1200px 57px, 1200px 800px;
+    text-align: center;
+}
+
+.advantages-title {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.advantages-subtitle {
+    line-height: 26px;
+    text-align: center;
+    color: #333333;
+}
+
+.advantages-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.advantage-item h3 {
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: 700;
+}
+
+.with-image {
+    color: #ffffff;
+    background-color: #81b3d2;
+}
+
+.text-only {
+    background-color: #eeeeee;
+}
+
+.text-only span,
+.text-only p {
+    color: #333333;
+}
+
+.more-advantages-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.more-advantage-item h4 {
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: 700;
+}
+
+.more-advantage-item p {
+    color: #333333;
+}
+
+.appointment {
+    text-align: center;
+}
+
+.appointment-title {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+}
+
+.appointment-subtitle {
+    line-height: 24px;
+    color: #333333;
+}
+
+.appointment-button {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #766357;
+    border: none;
+}
+
+.appointment-button:hover,
+.appointment-button:focus {
+    background-color: #604e43;
+}
+
+.appointment-button:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #503e33;
+}
+
+.appointment-item label {
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.appointment-item input {
+    font: inherit;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: #f2f2f2;
+    border: none;
+}
+
+.appointment-item input:hover {
+    background-color: #ebebeb;
+}
+
+.appointment-item input:focus {
+    background-color: #ffffff;
+    outline: 2px solid #e5e5e5;
+}
+
+.appointment-item .button-calendar {
+    background-color: transparent;
+    border: none;
+}
+
+.appointment-form .button-submit {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #81b3d2;
+    border: none;
+}
+
+.appointment-form .button-submit:hover,
+.appointment-form .button-submit:focus {
+    background-color: #669ec0;
+}
+
+.appointment-form .button-submit:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.filters {
+    color: #ffffff;
+    background-color: #669ec0;
+    background-image: url("../img/filter-background.jpg");
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    background-size: 1200px 800px;
+}
+
+.filter fieldset {
+    border: none;
+}
+
+.filter legend,
+.filter-range-title {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+}
+
+.filter ul {
+    list-style: none;
+}
+
+.price-controls input {
+    font: inherit;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+}
+
+.filter-button {
+    font: inherit;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+}
+
+.filter-button:hover,
+.filter-button:focus,
+.filter-button:active {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.sorting-results {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.results-number {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.sorting {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.filter-results-list {
+    list-style: none;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.filter-results-list .result-current {
+    color: #81b3d2;
+}
+
+.filter-result-item a {
+    color: rgba(0, 0, 0, 0.3);
+    text-decoration: underline dotted #81b3d2;
+}
+
+.filter-result-item a:hover,
+.filter-result-item a:focus {
+    color: #81b3d2;
+}
+
+.filter-result-item a:active {
+    color: #000000;
+    text-decoration: none;
+}
+
+.catalog-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.catalog-item {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.catalog-item a {
+    color: #000000;
+}
+
+.catalog-item h3 {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.hotel-name:hover,
+.hotel-name:focus {
+    color: #81b3d2;
+}
+
+.hotel-name:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.more-detail a {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.button-detail {
+    background-color: #81b3d2;
+}
+
+.button-detail:hover,
+.button-detail:focus {
+    background-color: #669ec0;
+}
+
+.button-detail:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.button-buy {
+    background-color: #766357;
+}
+
+.button-buy:hover,
+.button-buy:focus {
+    background-color: #604e43;
+}
+
+.button-buy:active {
+    background-color: #503e33;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.raiting-number {
+    color: #666666;
+    background-color: #f2f2f2;
+}
+
+.main-footer {
+    opacity: 0.9;
+}
+
+.footer-intro {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.footer-social {
+    text-align: center;
+}
+
+.footer-social ul {
+    list-style: none;
+}
+
+.social-button {
+    color: #81b3d2;
+}
+
+.footer-copyright {
+    text-align: center;
+}
+
+.footer-copyright span {
+    line-height: 26px;
+}
