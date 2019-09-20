@@ -328,16 +328,16 @@ a {
     color: rgba(255, 255, 255, 0.3);
 }
 
-.button-buy {
+.button-reserv {
     background-color: #766357;
 }
 
-.button-buy:hover,
-.button-buy:focus {
+.button-reserv:hover,
+.button-reserv:focus {
     background-color: #604e43;
 }
 
-.button-buy:active {
+.button-reserv:active {
     background-color: #503e33;
     color: rgba(255, 255, 255, 0.3);
 }
