@@ -61,15 +61,21 @@
                 </li>
               </ul>
             </fieldset>
-            <p class="filter-range-title">стоимость в сутки (р):</p>
-            <p class="price-controls">
-              <label>от<input type="text" name="min-price" value="0"></label>
-              <label>до<input type="text" name="max-price" value="3000"></label>
-            </p>
-            <div class="range-controls">
-              <input type="range" name="filter-price-range">
+            <div class="filter-range">
+              <p class="filter-range-title">стоимость в сутки (р):</p>
+              <p class="price-controls">
+                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+              </p>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
+              <button class="filter-button" type="submit">показать</button>
             </div>
-            <button class="filter-button" type="submit">показать</button>
           </form>
         </section>
         <section class="sorting-results">
