@@ -293,8 +293,24 @@ a {
     background-size: 1200px 800px;
 }
 
+.filter {
+    display: flex;
+    align-items: flex-start;
+    padding: 29px 72px;
+}
+
 .filter fieldset {
+    margin: 0;
+    padding: 0;
     border: none;
+}
+
+.filter fieldset:first-child {
+    width: 254px;
+}
+
+.filter fieldset:nth-child(2) {
+    width: 274px;
 }
 
 .filter legend,
@@ -305,6 +321,7 @@ a {
 }
 
 .filter-range-title {
+    margin: 0;
     margin-bottom: 9px;
 }
 
@@ -314,6 +331,7 @@ a {
 
 .filter-range {
     width: 330px;
+    margin-left: auto;
 }
 
 .price-controls {
@@ -497,6 +515,7 @@ a {
 
 .catalog-item h3 {
     margin: 0;
+    margin-bottom: 10px;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -506,8 +525,12 @@ a {
     margin: 0;
 }
 
-.catalog-item-image {
-    order: -1;
+.catalog-item-info {
+    margin-left: 30px;
+}
+
+.catalog-item .catalog-item-price {
+    margin-bottom: 14px;
 }
 
 .hotel-name:hover,
@@ -552,8 +575,11 @@ a {
     color: rgba(255, 255, 255, 0.3);
 }
 
-.raiting {
+.catalog-item .raiting {
     margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .raiting-number {
