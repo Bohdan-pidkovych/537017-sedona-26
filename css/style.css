@@ -162,20 +162,12 @@ input[type="radio"].visually-hidden {
     order: -2;
 }
 
-.with-image:first-child::after {
-    content: "";
-    width: 800px;
+.image-only {
     height: 256px;
-    background-image: url("../img/town-sedona.jpg");
-    background-repeat: no-repeat;
 }
 
-.with-image:nth-child(2)::before {
-    content: "";
-    width: 800px;
-    height: 256px;
-    background-image: url("../img/bridge-sedona.jpg");
-    background-repeat: no-repeat;
+.with-image:nth-child(2) .image-only {
+    order: -1;
 }
 
 .text-only {
