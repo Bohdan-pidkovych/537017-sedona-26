@@ -66,21 +66,29 @@ input[type="radio"].visually-hidden {
     justify-content: flex-start;
     flex-wrap: wrap;
     width: 1200px;
+    min-height: 56px;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 .site-navigation li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     box-sizing: border-box;
     width: 239px;
-    min-height: 56px;
+    padding: 15px 70px;
 }
 
-.site-navigation li:nth-child(3n) {
+.site-navigation li:nth-child(4n+1),
+.site-navigation li:nth-child(4n+2) {
+    text-align: left;
+}
+
+.site-navigation li:nth-child(4n+3),
+.site-navigation li:nth-child(4n+4) {
+    text-align: right;
+}
+
+.site-navigation li:nth-child(4n+3) {
     margin-left: 244px;
 }
 
@@ -176,7 +184,7 @@ input[type="radio"].visually-hidden {
     width: 400px;
     background-color: #eeeeee;
     padding-top: 47px;
-    padding-bottom: 60px;
+    padding-bottom: 59px;
     padding-left: 46px;
     padding-right: 46px;
 }
@@ -184,6 +192,7 @@ input[type="radio"].visually-hidden {
 .text-only h3 {
     margin: 0;
     margin-bottom: 23px;
+    padding: 0 75px;
     font-size: 21px;
     line-height: 21px;
     font-weight: 700;
@@ -194,12 +203,24 @@ input[type="radio"].visually-hidden {
     color: #333333;
 }
 
-.text-only span {
-    margin-bottom: 22px;
+.text-only p {
+    margin: 0;
+    margin-top: 22px;
+    padding: 0;
+    word-wrap: break-word;
 }
 
-.text-only p {
-    word-wrap: break-word;
+.other-advantage p {
+    padding: 0 20px;
+}
+
+.advantage-item:first-child p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.advantage-item:nth-child(5) p {
+    padding: 0 25px;
 }
 
 .with-image .text-only {
@@ -230,6 +251,7 @@ input[type="radio"].visually-hidden {
 }
 
 .more-advantage-item h4 {
+    position: relative;
     margin-top: 160px;
     margin-bottom: 27px;
     font-size: 21px;
@@ -237,10 +259,45 @@ input[type="radio"].visually-hidden {
     font-weight: 700;
 }
 
+.more-advantage-item h4::before {
+    content: "";
+    position: absolute;
+}
+
+.more-advantage-item:first-child h4::before {
+    bottom: 50px;
+    left: 162px;
+    width: 75px;
+    height: 72px;
+    background-image: url("../img/icon-house.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.more-advantage-item:nth-child(2) h4::before {
+    bottom: 53px;
+    left: 163px;
+    width: 74px;
+    height: 70px;
+    background-image: url("../img/icon-food.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.more-advantage-item:last-child h4::before {
+    bottom: 53px;
+    left: 168px;
+    width: 64px;
+    height: 76px;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
 .more-advantage-item p {
     width: 285px;
     margin: 0 auto;
-    margin-bottom: 82px;
+    margin-bottom: 80px;
     color: #333333;
 }
 
@@ -249,18 +306,25 @@ input[type="radio"].visually-hidden {
 }
 
 .appointment-title {
+    margin: 0;
     margin-top: 55px;
+    margin-bottom: 25px;
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
 }
 
 .appointment-subtitle {
+    margin: 0;
+    margin-bottom: 47px;
     line-height: 24px;
     color: #333333;
 }
 
 .appointment-button {
+    display: block;
+    margin: 0 auto;
+    padding: 30px 139px;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -678,6 +742,19 @@ input[type="radio"].visually-hidden {
     background-color: #81b3d2;
 }
 
+.social-button:hover,
+.social-button:focus {
+    background-color: #669ec0;
+}
+
+.social-button:active {
+    background-color: #5496bd;
+}
+
+.social-button:active path {
+    opacity: 0.3;
+}
+
 .footer-copyright {
     display: flex;
     align-items: center;
@@ -696,4 +773,13 @@ input[type="radio"].visually-hidden {
     display: block;
     width: 115px;
     height: 41px;
+}
+
+.button-copyright:hover path,
+.button-copyright:focus path {
+    fill: #81b3d2;
+}
+
+.button-copyright:active path {
+    fill: #bdbbbc;
 }
