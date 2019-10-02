@@ -303,6 +303,7 @@ input[type="radio"].visually-hidden {
 }
 
 .appointment {
+    position: relative;
     text-align: center;
 }
 
@@ -324,6 +325,7 @@ input[type="radio"].visually-hidden {
 
 .appointment-button {
     display: block;
+    width: 568px;
     margin: 0 auto;
     padding: 30px 139px;
     font-size: 21px;
@@ -345,12 +347,37 @@ input[type="radio"].visually-hidden {
     background-color: #503e33;
 }
 
+.appointment-container {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    box-sizing: border-box;
+    width: 568px;
+    margin-left: -284px;
+    padding: 55px;
+    background-color: #ffffff;
+}
+
+.appointment-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
 .appointment-item label {
+    padding-top: 6px;
     line-height: 26px;
     font-weight: 700;
 }
 
 .appointment-item input {
+    box-sizing: border-box;
+    width: 346px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
     font: inherit;
     line-height: 26px;
     font-weight: 700;
@@ -370,11 +397,34 @@ input[type="radio"].visually-hidden {
 }
 
 .appointment-item .button-calendar {
+    position: absolute;
+    top: 6px;
+    right: 9px;
     background-color: transparent;
     border: none;
 }
 
+.appointment-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 54px;
+}
+
+.appointment-group .appointment-item {
+    margin: 0;
+}
+
+.appointment-group input {
+    box-sizing: border-box;
+    width: 38px;
+}
+
 .appointment-form .button-submit {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;

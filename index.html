@@ -91,31 +91,35 @@
           <p class="appointment-title">Заинтересовались?</p>
           <p class="appointment-subtitle">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
           <button class="appointment-button" type="button">Поиск гостиницы в Седоне</button>
-          <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
-            <p class="appointment-item">
-              <label for="appointment-date-1">Дата заезда:</label>
-              <input id="appointment-date-1" type="text" name="date-1" value="" placeholder="24 апреля 2017">
-              <button class="button-calendar" type="button">
-                <img src="img/icon-calendar.svg" width="21" height="22" alt="Открыть календарь">
-              </button>
-            </p>
-            <p class="appointment-item">
-              <label for="appointment-date-2">Дата выезда:</label>
-              <input id="appointment-date-2" type="text" name="date-2" placeholder="4 июля 2017">
-              <button class="button-calendar" type="button">
-                <img src="img/icon-calendar.svg" width="21" height="22" alt="Открыть календарь">
-              </button>
-            </p>
-            <p class="appointment-item">
-              <label for="appointment-adult">Взрослые:</label>
-              <input id="appointment-adult" type="number" name="adult" placeholder="2">
-            </p>
-            <p class="appointment-item">
-              <label for="appointment-children">Дети:</label>
-              <input id="appointment-children" type="number" name="children" placeholder="0">
-            </p>
-            <button class="button-submit" type="submit">Найти</button>
-          </form>
+          <div class="appointment-container">
+            <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+              <p class="appointment-item">
+                <label for="appointment-date-1">Дата заезда:</label>
+                <input id="appointment-date-1" type="text" name="date-1" value="" placeholder="24 апреля 2017">
+                <button class="button-calendar" type="button">
+                  <img src="img/icon-calendar.svg" width="21" height="22" alt="Открыть календарь">
+                </button>
+              </p>
+              <p class="appointment-item">
+                <label for="appointment-date-2">Дата выезда:</label>
+                <input id="appointment-date-2" type="text" name="date-2" placeholder="4 июля 2017">
+                <button class="button-calendar" type="button">
+                  <img src="img/icon-calendar.svg" width="21" height="22" alt="Открыть календарь">
+                </button>
+              </p>
+              <div class="appointment-group">
+                <p class="appointment-item">
+                  <label for="appointment-adult">Взрослые:</label>
+                  <input id="appointment-adult" type="number" name="adult" placeholder="2">
+                </p>
+                <p class="appointment-item">
+                  <label for="appointment-children">Дети:</label>
+                  <input id="appointment-children" type="number" name="children" placeholder="0">
+                </p>
+              </div>
+              <button class="button-submit" type="submit">Найти</button>
+            </form>
+          </div>
         </section>
         <section class="main-map">
           <h2 class="visually-hidden">Карта расположения Седоны</h2>
