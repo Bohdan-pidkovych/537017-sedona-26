@@ -88,10 +88,20 @@
               <li class="filter-result-item"><a href="#">По типу</a></li>
               <li class="filter-result-item"><a href="#">По рейтингу</a></li>
             </ul>
-            <p class="buttons-sorting">
-              <a class="button-up" href="#">Вверх</a>
-              <a class="button-down" href="#">Вниз</a>
-            </p>
+            <div class="buttons-sorting">
+              <a class="button-up" href="#">
+                <span class="visually-hidden">По возрастанию</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                  <path fill="#cacaca" d="M5.5 0L0 10h11z"/>
+                </svg>
+              </a>
+              <a class="button-down button-current" href="#">
+                <span class="visually-hidden">По убыванию</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                  <path fill="#cacaca" d="M5.5 10L0 0h11"/>
+                </svg>
+              </a>
+            </div>
           </div>
         </section>
         <section class="hotels">
@@ -112,10 +122,10 @@
                   <a class="button-reserv" href="#">Забронировать</a>
                 </p>
               </div>
-              <p class="raiting">
+              <div class="raiting">
                 <span class="raiting-stars">4 stars</span>
                 <span class="raiting-number">рейтинг: 8,5</span>
-              </p>
+              </div>
             </li>
             <li class="catalog-item">
               <img src="img/hotel-desert.jpg" width="135" height="90" alt="Desert quail inn">
@@ -132,10 +142,10 @@
                   <a class="button-reserv" href="#">Забронировать</a>
                 </p>
               </div>
-              <p class="raiting">
+              <div class="raiting">
                 <span class="raiting-stars">3 stars</span>
                 <span class="raiting-number">рейтинг: 8,9</span>
-              </p>
+              </div>
             </li>
             <li class="catalog-item">
               <img src="img/hotel-villas.jpg" width="135" height="90" alt="Villas at poco diablo">
@@ -152,10 +162,10 @@
                   <a class="button-reserv" href="#">Забронировать</a>
                 </p>
               </div>
-              <p class="raiting">
+              <div class="raiting">
                 <span class="raiting-stars">2 stars</span>
                 <span class="raiting-number">рейтинг: 9,2</span>
-              </p>
+              </div>
             </li>
           </ul>
         </section>
