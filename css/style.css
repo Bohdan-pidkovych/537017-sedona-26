@@ -407,16 +407,58 @@ input[type="radio"].visually-hidden {
 .appointment-group {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 54px;
+    margin-bottom: 53px;
 }
 
 .appointment-group .appointment-item {
     margin: 0;
 }
 
+.appointment-group .appointment-item:first-child label {
+    margin-right: 41px;
+}
+
+.appointment-group .appointment-item:nth-child(2) label {
+    margin-right: 27px;
+}
+
 .appointment-group input {
     box-sizing: border-box;
     width: 38px;
+}
+
+.appointment-group .button-less,
+.appointment-group .button-more {
+    position: relative;
+    box-sizing: border-box;
+    width: 38px;
+    background-color: #f2f2f2;
+    border: none;
+}
+
+.appointment-group .button-less::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 13px;
+    width: 12px;
+    height: 3px;
+    background-color: #aaaaaa;
+}
+
+.appointment-group .button-more::before,
+.appointment-group .button-more::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 13px;
+    width: 11px;
+    height: 3px;
+    background-color: #aaaaaa;
+}
+
+.appointment-group .button-more::after {
+    transform: rotate(90deg);
 }
 
 .appointment-form .button-submit {
