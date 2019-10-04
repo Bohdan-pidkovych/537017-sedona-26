@@ -405,6 +405,15 @@ input[type="radio"].visually-hidden {
     cursor: pointer;
 }
 
+.button-calendar:hover path,
+.button-calendar:focus path {
+    fill: #231f20;
+}
+
+.button-calendar:active path {
+    fill: #81b3d2;
+}
+
 .appointment-group {
     display: flex;
     justify-content: space-between;
