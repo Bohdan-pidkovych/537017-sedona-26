@@ -402,6 +402,7 @@ input[type="radio"].visually-hidden {
     right: 9px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .appointment-group {
@@ -443,6 +444,7 @@ input[type="number"] {
     width: 38px;
     background-color: #f2f2f2;
     border: none;
+    cursor: pointer;
 }
 
 .appointment-group .button-less::before {
@@ -464,6 +466,21 @@ input[type="number"] {
     width: 11px;
     height: 3px;
     background-color: #aaaaaa;
+}
+
+.appointment-group .button-less:hover::before,
+.appointment-group .button-less:focus::before,
+.appointment-group .button-more:hover::before,
+.appointment-group .button-more:focus::before,
+.appointment-group .button-more:hover::after,
+.appointment-group .button-more:focus::after {
+    background-color: #231f20;
+}
+
+.appointment-group .button-less:active::before,
+.appointment-group .button-more:active::before,
+.appointment-group .button-more:active::after {
+    background-color: #81b3d2;
 }
 
 .appointment-group .button-more::after {
@@ -770,6 +787,10 @@ input[type="number"] {
 }
 
 .catalog-item .catalog-item-price {
+    display: flex;
+    justify-content: space-between;
+    width: 182px;
+    margin: 0;
     margin-bottom: 14px;
 }
 
@@ -823,6 +844,7 @@ input[type="number"] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
 }
 
 .raiting-number {
