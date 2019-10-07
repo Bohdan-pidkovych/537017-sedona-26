@@ -111,24 +111,24 @@ input[type="radio"].visually-hidden {
 }
 
 .main-intro {
-    min-height: 507px;
+    min-height: 508px;
     background-color: #acd5ee;
     background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
-    background-position: center 100%, center -83px;
+    background-position: center bottom, center -83px;
     background-repeat: no-repeat, no-repeat;
-    background-size:1200px 57px, 1200px 800px;
+    background-size: 1200px 57px, 1200px 800px;
     text-align: center;
 }
 
 .main-intro img {
     padding-top: 75px;
-    padding-bottom: 80px;
+    padding-bottom: 75px;
 }
 
 .advantages-title {
     width: 440px;
     margin: 0 auto;
-    margin-top: 55px;
+    margin-top: 59px;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -136,7 +136,7 @@ input[type="radio"].visually-hidden {
 }
 
 .advantages-subtitle {
-    margin-top: 30px;
+    margin-top: 25px;
     margin-bottom: 50px;
     line-height: 26px;
     text-align: center;
@@ -448,7 +448,6 @@ input[type="number"] {
 
 .appointment-group .button-less,
 .appointment-group .button-more {
-    position: relative;
     box-sizing: border-box;
     width: 38px;
     background-color: #f2f2f2;
@@ -456,44 +455,23 @@ input[type="number"] {
     cursor: pointer;
 }
 
-.appointment-group .button-less::before {
-    content: "";
-    position: absolute;
-    top: 17px;
-    left: 13px;
-    width: 12px;
-    height: 3px;
-    background-color: #aaaaaa;
+.button-less span,
+.button-more span {
+    font-size: 22px;
+    font-weight: 700;
+    color: #aaaaaa;
 }
 
-.appointment-group .button-more::before,
-.appointment-group .button-more::after {
-    content: "";
-    position: absolute;
-    top: 17px;
-    left: 13px;
-    width: 11px;
-    height: 3px;
-    background-color: #aaaaaa;
+.button-less span:hover,
+.button-less span:focus,
+.button-more span:hover,
+.button-more span:focus {
+    color: #231f20;
 }
 
-.appointment-group .button-less:hover::before,
-.appointment-group .button-less:focus::before,
-.appointment-group .button-more:hover::before,
-.appointment-group .button-more:focus::before,
-.appointment-group .button-more:hover::after,
-.appointment-group .button-more:focus::after {
-    background-color: #231f20;
-}
-
-.appointment-group .button-less:active::before,
-.appointment-group .button-more:active::before,
-.appointment-group .button-more:active::after {
-    background-color: #81b3d2;
-}
-
-.appointment-group .button-more::after {
-    transform: rotate(90deg);
+.button-less span:active,
+.button-more span:active {
+    color: #81b3d2;
 }
 
 .appointment-form .button-submit {
@@ -561,13 +539,58 @@ input[type="number"] {
     font-weight: 700;
 }
 
+.filter legend {
+    margin-bottom: 25px;
+}
+
 .filter-range-title {
     margin: 0;
     margin-bottom: 9px;
 }
 
 .filter ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
+}
+
+.filter-option {
+    margin-bottom: 23px;
+    padding-left: 40px;
+}
+
+.filter-option:last-child {
+    margin-bottom: 0;
+}
+
+.filter-option label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.filter-input-checkbox + label::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -40px;
+    width: 19px;
+    height: 19px;
+    border: 2px solid #ffffff;
+    border-radius: 3px;
+}
+
+.filter-input-checkbox:checked + label::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -35px;
+    width: 16px;
+    height: 7px;
+    border: 4px solid #ffffff;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
 }
 
 .filter-range {
@@ -818,6 +841,7 @@ input[type="number"] {
 }
 
 .button-detail {
+    display: inline-block;
     padding: 4px 17px;
     background-color: #81b3d2;
 }
