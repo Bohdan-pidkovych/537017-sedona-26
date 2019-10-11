@@ -16,7 +16,6 @@ a {
 
 img {
     max-width: 100%;
-    height: auto;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -76,7 +75,10 @@ input[type="radio"].visually-hidden {
 .site-navigation li {
     box-sizing: border-box;
     width: 239px;
-    padding: 15px 70px;
+    padding-top: 13px;
+    padding-bottom: 17px;
+    padding-left: 71px;
+    padding-right: 71px;
 }
 
 .site-navigation li:nth-child(4n+1),
@@ -89,8 +91,14 @@ input[type="radio"].visually-hidden {
     text-align: right;
 }
 
+.site-navigation li:nth-child(4n+2) {
+    padding-left: 74px;
+    padding-right: 66px;
+}
+
 .site-navigation li:nth-child(4n+3) {
     margin-left: 244px;
+    padding-right: 76px;
 }
 
 .site-navigation a {
@@ -122,13 +130,13 @@ input[type="radio"].visually-hidden {
 
 .main-intro img {
     padding-top: 75px;
-    padding-bottom: 75px;
+    padding-bottom: 73px;
 }
 
 .advantages-title {
     width: 440px;
     margin: 0 auto;
-    margin-top: 59px;
+    margin-top: 60px;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -136,8 +144,8 @@ input[type="radio"].visually-hidden {
 }
 
 .advantages-subtitle {
-    margin-top: 25px;
-    margin-bottom: 50px;
+    margin-top: 27px;
+    margin-bottom: 51px;
     line-height: 26px;
     text-align: center;
     color: #333333;
@@ -253,8 +261,8 @@ input[type="radio"].visually-hidden {
 
 .more-advantage-item h4 {
     position: relative;
-    margin-top: 160px;
-    margin-bottom: 27px;
+    margin-top: 161px;
+    margin-bottom: 24px;
     font-size: 21px;
     line-height: 21px;
     font-weight: 700;
@@ -276,7 +284,7 @@ input[type="radio"].visually-hidden {
 }
 
 .more-advantage-item:nth-child(2) h4::before {
-    bottom: 53px;
+    bottom: 51px;
     left: 163px;
     width: 74px;
     height: 70px;
@@ -286,7 +294,7 @@ input[type="radio"].visually-hidden {
 }
 
 .more-advantage-item:last-child h4::before {
-    bottom: 53px;
+    bottom: 50px;
     left: 168px;
     width: 64px;
     height: 76px;
@@ -298,7 +306,7 @@ input[type="radio"].visually-hidden {
 .more-advantage-item p {
     width: 285px;
     margin: 0 auto;
-    margin-bottom: 80px;
+    margin-bottom: 82px;
     color: #333333;
 }
 
@@ -309,8 +317,8 @@ input[type="radio"].visually-hidden {
 
 .appointment-title {
     margin: 0;
-    margin-top: 55px;
-    margin-bottom: 25px;
+    margin-top: 50px;
+    margin-bottom: 24px;
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
@@ -400,7 +408,7 @@ input[type="radio"].visually-hidden {
 .appointment-item .button-calendar {
     position: absolute;
     top: 6px;
-    right: 9px;
+    right: 4px;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -505,6 +513,7 @@ input[type="number"] {
 }
 
 .filters {
+    min-height: 217px;
     color: #ffffff;
     background-color: #669ec0;
     background-image: url("../img/filter-background.jpg");
@@ -516,7 +525,7 @@ input[type="number"] {
 .filter {
     display: flex;
     align-items: flex-start;
-    padding: 29px 72px;
+    padding: 27px 72px;
 }
 
 .filter fieldset {
@@ -547,7 +556,7 @@ input[type="number"] {
 
 .filter-range-title {
     margin: 0;
-    margin-bottom: 9px;
+    margin-bottom: 10px;
 }
 
 .filter ul {
@@ -557,7 +566,7 @@ input[type="number"] {
 }
 
 .filter-option {
-    margin-bottom: 23px;
+    margin-bottom: 25px;
     padding-left: 40px;
 }
 
@@ -593,13 +602,40 @@ input[type="number"] {
     background-repeat: no-repeat;
 }
 
+.filter-input-checkbox:disabled + label::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -40px;
+    width: 27px;
+    height: 23px;
+    background-image: url("../img/checkbox-off-disabled.svg");
+    background-repeat: no-repeat;
+}
+
+.filter-input-checkbox:checked:disabled + label::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -40px;
+    width: 27px;
+    height: 23px;
+    background-image: url("../img/checkbox-on-disabled.svg");
+    background-repeat: no-repeat;
+}
+
+.filter-input-checkbox:focus + label::before {
+    outline: 2px solid #a8c7f7;
+}
+
 .filter-range {
-    width: 330px;
+    width: 318px;
     margin-left: auto;
 }
 
 .price-controls {
     position: relative;
+    box-sizing: border-box;
     height: 36px;
     margin-bottom: 20px;
     font-size: 0;
@@ -621,15 +657,19 @@ input[type="number"] {
 .price-controls label {
     display: inline-block;
     font-size: 14px;
-    line-height: 38px;
+    line-height: 28px;
     vertical-align: top;
     cursor: pointer;
 }
 
-.price-controls .min-price,
-.price-controls .max-price {
+.price-controls .min-price {
     width: 90px;
     padding-left: 65px;
+}
+
+.price-controls .max-price {
+    width: 90px;
+    padding-left: 55px;
 }
 
 .price-controls input {
@@ -643,7 +683,7 @@ input[type="number"] {
 
 .range-controls {
     position: relative;
-    margin-bottom: 32px;
+    margin-bottom: 31px;
 }
 
 .range-controls .scale {
@@ -660,17 +700,23 @@ input[type="number"] {
 .range-toggle {
     position: absolute;
     top: -9px;
-    width: 4px;
-    height: 4px;
-    background: #ababab;
-    border: 8px solid #ffffff;
-    border-radius: 50%;
-    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    width: 20px;
+    height: 22px;
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/filter-button.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
     cursor: pointer;
 }
 
-.range-toggle:hover {
-    background: #1c4f80;
+.range-toggle:hover,
+.range-toggle:focus {
+    width: 22px;
+    height: 24px;
+    background-image: url("../img/filter-button-hover.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .range-toggle-min {
@@ -683,8 +729,8 @@ input[type="number"] {
 
 .filter-button {
     display: block;
-    margin: 0 auto;
-    padding: 6px 35px;
+    margin-left: 84px;
+    padding: 6px 34px;
     font: inherit;
     color: #ffffff;
     text-transform: uppercase;
@@ -707,11 +753,11 @@ input[type="number"] {
 
 .sorting-columns {
     display: flex;
+    align-items: baseline;
     padding-left: 72px;
     padding-right: 73px;
     padding-top: 30px;
     padding-bottom: 30px;
-    align-items: baseline;
 }
 
 .results-number {
@@ -746,7 +792,7 @@ input[type="number"] {
 
 .filter-result-item a {
     color: rgba(0, 0, 0, 0.3);
-    text-decoration: underline dotted #81b3d2;
+    border-bottom: 1px dotted #81b3d2;
 }
 
 .filter-result-item a:hover,
@@ -756,7 +802,7 @@ input[type="number"] {
 
 .filter-result-item a:active {
     color: #000000;
-    text-decoration: none;
+    border-bottom: none;
 }
 
 .buttons-sorting {
@@ -804,7 +850,8 @@ input[type="number"] {
 
 .catalog-item h3 {
     margin: 0;
-    margin-bottom: 10px;
+    margin-top: -5px;
+    margin-bottom: 7px;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -842,7 +889,7 @@ input[type="number"] {
 
 .button-detail {
     display: inline-block;
-    padding: 4px 17px;
+    padding: 3px 17px;
     background-color: #81b3d2;
 }
 
@@ -859,7 +906,7 @@ input[type="number"] {
 .button-reserv {
     display: inline-block;
     margin-left: 2px;
-    padding: 4px 16px;
+    padding: 3px 16px;
     background-color: #766357;
 }
 
