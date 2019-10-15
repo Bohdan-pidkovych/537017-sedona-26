@@ -77,23 +77,22 @@ input[type="radio"].visually-hidden {
     width: 239px;
     padding-top: 13px;
     padding-bottom: 17px;
-    padding-left: 71px;
-    padding-right: 71px;
 }
 
 .site-navigation li:nth-child(4n+1),
 .site-navigation li:nth-child(4n+2) {
+    padding-left: 71px;
     text-align: left;
 }
 
 .site-navigation li:nth-child(4n+3),
 .site-navigation li:nth-child(4n+4) {
+    padding-right: 71px;
     text-align: right;
 }
 
 .site-navigation li:nth-child(4n+2) {
     padding-left: 74px;
-    padding-right: 66px;
 }
 
 .site-navigation li:nth-child(4n+3) {
@@ -124,7 +123,7 @@ input[type="radio"].visually-hidden {
     background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
     background-position: center bottom, center -83px;
     background-repeat: no-repeat, no-repeat;
-    background-size: 1200px 57px, 1200px 800px;
+    background-size: 100% 57px, 100% 800px;
     text-align: center;
 }
 
@@ -365,12 +364,14 @@ input[type="radio"].visually-hidden {
     margin-left: -284px;
     padding: 55px;
     background-color: #ffffff;
+    box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
 }
 
 .appointment-item {
     position: relative;
     display: flex;
     justify-content: space-between;
+    /* align-items: center; */
     margin-bottom: 30px;
     margin-top: 0;
 }
@@ -384,13 +385,16 @@ input[type="radio"].visually-hidden {
 .appointment-item input {
     box-sizing: border-box;
     width: 346px;
+    min-height: 38px;
     padding-top: 6px;
     padding-bottom: 6px;
     padding-left: 12px;
+    padding-right: 40px;
     font: inherit;
     line-height: 26px;
     font-weight: 700;
     text-transform: uppercase;
+    vertical-align: middle;
     color: #000000;
     background-color: #f2f2f2;
     border: none;
@@ -407,8 +411,11 @@ input[type="radio"].visually-hidden {
 
 .appointment-item .button-calendar {
     position: absolute;
-    top: 6px;
-    right: 4px;
+    top: 8px;
+    right: 9px;
+    width: 21px;
+    height: 22px;
+    padding: 0;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -433,26 +440,29 @@ input[type="radio"].visually-hidden {
     margin: 0;
 }
 
+.appointment-group input {
+    box-sizing: border-box;
+    width: 38px;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.appointment-group input::-webkit-outer-spin-button,
+.appointment-group input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.appointment-group input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 .appointment-group .appointment-item:first-child label {
-    margin-right: 41px;
+    margin-right: 40px;
 }
 
 .appointment-group .appointment-item:nth-child(2) label {
     margin-right: 27px;
-}
-
-.appointment-group input {
-    box-sizing: border-box;
-    width: 38px;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-
-input[type="number"] {
-    -moz-appearance: textfield;
 }
 
 .appointment-group .button-less,
@@ -471,15 +481,15 @@ input[type="number"] {
     color: #aaaaaa;
 }
 
-.button-less span:hover,
-.button-less span:focus,
-.button-more span:hover,
-.button-more span:focus {
+.button-less:hover span,
+.button-less:focus span,
+.button-more:hover span,
+.button-more:focus span {
     color: #231f20;
 }
 
-.button-less span:active,
-.button-more span:active {
+.button-less:active span,
+.button-more:active span {
     color: #81b3d2;
 }
 
@@ -519,7 +529,7 @@ input[type="number"] {
     background-image: url("../img/filter-background.jpg");
     background-position: 0 center;
     background-repeat: no-repeat;
-    background-size: 1200px 800px;
+    background-size: 100% 800px;
 }
 
 .filter {
