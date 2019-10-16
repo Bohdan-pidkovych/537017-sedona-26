@@ -1,13 +1,13 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", Tahoma, sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
     color: #000000;
     text-transform: uppercase;
-    background-color: #ffffff;
+    background-color: #f2f2f2;
 }
 
 a {
@@ -37,6 +37,7 @@ input[type="radio"].visually-hidden {
     position: relative;
     width: 1200px;
     margin: 0 auto;
+    background-color: #ffffff;
     box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
 
@@ -75,8 +76,8 @@ input[type="radio"].visually-hidden {
 .site-navigation li {
     box-sizing: border-box;
     width: 239px;
-    padding-top: 13px;
-    padding-bottom: 17px;
+    padding-top: 14px;
+    padding-bottom: 16px;
 }
 
 .site-navigation li:nth-child(4n+1),
@@ -117,13 +118,19 @@ input[type="radio"].visually-hidden {
     color: #766357;
 }
 
+.site-navigation-current a:hover,
+.site-navigation-current a:focus {
+    color: #766357;
+    cursor: default;
+}
+
 .main-intro {
     min-height: 508px;
     background-color: #acd5ee;
     background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
-    background-position: center bottom, center -83px;
+    background-position: center bottom, center -84px;
     background-repeat: no-repeat, no-repeat;
-    background-size: 100% 57px, 100% 800px;
+    background-size: auto, cover;
     text-align: center;
 }
 
@@ -335,6 +342,7 @@ input[type="radio"].visually-hidden {
     width: 568px;
     margin: 0 auto;
     padding: 30px 5px;
+    font-family: inherit;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -343,6 +351,7 @@ input[type="radio"].visually-hidden {
     color: #ffffff;
     background-color: #766357;
     border: none;
+    cursor: pointer;
 }
 
 .appointment-button:hover,
@@ -367,11 +376,14 @@ input[type="radio"].visually-hidden {
     box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
 }
 
+.appointment-hide {
+    display: none;
+}
+
 .appointment-item {
     position: relative;
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     margin-bottom: 30px;
     margin-top: 0;
 }
@@ -400,6 +412,18 @@ input[type="radio"].visually-hidden {
     border: none;
 }
 
+.appointment-item input::-webkit-input-placeholder {
+    color: #000000;
+}
+
+.appointment-item input::-moz-placeholder {
+    color: #000000;
+}
+
+.appointment-item input::-ms-input-placeholder {
+    color: #000000;
+}
+
 .appointment-item input:hover {
     background-color: #ebebeb;
 }
@@ -419,6 +443,7 @@ input[type="radio"].visually-hidden {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    fill: #cacaca;
 }
 
 .button-calendar:hover path,
@@ -444,6 +469,8 @@ input[type="radio"].visually-hidden {
     box-sizing: border-box;
     width: 38px;
     padding: 0;
+    font: inherit;
+    font-weight: 700;
     text-align: center;
     vertical-align: middle;
 }
@@ -499,6 +526,7 @@ input[type="radio"].visually-hidden {
     width: 100%;
     padding-top: 16px;
     padding-bottom: 16px;
+    font: inherit;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -506,6 +534,7 @@ input[type="radio"].visually-hidden {
     color: #ffffff;
     background-color: #81b3d2;
     border: none;
+    cursor: pointer;
 }
 
 .appointment-form .button-submit:hover,
@@ -529,7 +558,7 @@ input[type="radio"].visually-hidden {
     background-image: url("../img/filter-background.jpg");
     background-position: 0 center;
     background-repeat: no-repeat;
-    background-size: 100% 800px;
+    background-size: 100%;
 }
 
 .filter {
@@ -710,13 +739,12 @@ input[type="radio"].visually-hidden {
 .range-toggle {
     position: absolute;
     top: -9px;
-    width: 20px;
-    height: 22px;
-    border: none;
-    background-color: transparent;
-    background-image: url("../img/filter-button.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    width: 4px;
+    height: 4px;
+    background-color: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
     cursor: pointer;
 }
 
