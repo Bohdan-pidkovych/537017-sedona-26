@@ -364,6 +364,10 @@ input[type="radio"].visually-hidden {
     background-color: #503e33;
 }
 
+.appointment-text {
+    z-index: 2;
+}
+
 .appointment-container {
     position: absolute;
     top: 100%;
@@ -374,10 +378,39 @@ input[type="radio"].visually-hidden {
     padding: 55px;
     background-color: #ffffff;
     box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+    z-index: 1;
+}
+
+@keyframes open {
+    0% {
+        transform: translateY(-400px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes close {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-400px);
+    }
 }
 
 .appointment-hide {
     display: none;
+}
+
+.appointment-animation-open {
+    display: block;
+    animation: open 2s;
+}
+
+.appointment-animation-close {
+    display: block;
+    animation: close 2s;
 }
 
 .appointment-item {
@@ -737,10 +770,12 @@ input[type="radio"].visually-hidden {
 }
 
 .range-toggle {
+    box-sizing: content-box;
     position: absolute;
     top: -9px;
     width: 4px;
     height: 4px;
+    padding: 0;
     background-color: #ababab;
     border: 8px solid #ffffff;
     border-radius: 50%;
@@ -750,11 +785,9 @@ input[type="radio"].visually-hidden {
 
 .range-toggle:hover,
 .range-toggle:focus {
-    width: 22px;
-    height: 24px;
-    background-image: url("../img/filter-button-hover.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    top: -10px;
+    background-color: #1c4f80;
+    border-width: 9px;
 }
 
 .range-toggle-min {
@@ -874,12 +907,12 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item {
-    border-bottom: 1px solid #e5e5e5;
     display: flex;
     padding-left: 72px;
     padding-right: 73px;
     padding-top: 30px;
     padding-bottom: 30px;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .catalog-item a {
@@ -964,6 +997,10 @@ input[type="radio"].visually-hidden {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+.raiting-stars img {
+    margin-left: 2px;
 }
 
 .raiting-number {
