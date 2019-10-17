@@ -130,7 +130,7 @@ input[type="radio"].visually-hidden {
     background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
     background-position: center bottom, center -84px;
     background-repeat: no-repeat, no-repeat;
-    background-size: auto, cover;
+    background-size: 100%, cover;
     text-align: center;
 }
 
@@ -159,6 +159,8 @@ input[type="radio"].visually-hidden {
 
 .advantages {
     text-align: center;
+    position: relative;
+    z-index: 4;
 }
 
 .advantages-list {
@@ -323,8 +325,8 @@ input[type="radio"].visually-hidden {
 
 .appointment-title {
     margin: 0;
-    margin-top: 50px;
     margin-bottom: 24px;
+    padding-top: 50px;   
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
@@ -365,7 +367,9 @@ input[type="radio"].visually-hidden {
 }
 
 .appointment-text {
-    z-index: 2;
+    position: relative;
+    z-index: 4;
+    background-color: #ffffff;
 }
 
 .appointment-container {
@@ -378,7 +382,7 @@ input[type="radio"].visually-hidden {
     padding: 55px;
     background-color: #ffffff;
     box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
-    z-index: 1;
+    z-index: 3;
 }
 
 @keyframes open {
@@ -410,7 +414,7 @@ input[type="radio"].visually-hidden {
 
 .appointment-animation-close {
     display: block;
-    animation: close 2s;
+    animation: close 2s forwards;
 }
 
 .appointment-item {
@@ -525,6 +529,10 @@ input[type="radio"].visually-hidden {
     margin-right: 27px;
 }
 
+.appointment-form .appointment-input-empty {
+    outline: 2px solid #ff0000;
+}
+
 .appointment-group .button-less,
 .appointment-group .button-more {
     box-sizing: border-box;
@@ -581,7 +589,23 @@ input[type="radio"].visually-hidden {
 }
 
 .main-map {
+    position: relative;
     display: flex;
+    flex-direction: column;
+    min-height: 594px;
+}
+
+.main-map img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.main-map iframe {
+    position: relative;
+    z-index: 2;
+    border: 0;
 }
 
 .filters {
