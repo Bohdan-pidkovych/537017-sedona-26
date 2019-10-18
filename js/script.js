@@ -6,6 +6,13 @@ if (form != null) {
     var adult = form.querySelector("[name=adult]");
     var children = form.querySelector("[name=children]");
     var formInput = form.querySelectorAll("input");
+    var isStorageSupport = true;
+    var storage = "";
+    try {
+        storage = localStorage.getItem("adult");
+    } catch (err) {
+        isStorageSupport = false;
+    }
     form.classList.add("appointment-hide");
     button.addEventListener("click", function (evt) {
         evt.preventDefault();
@@ -14,6 +21,9 @@ if (form != null) {
             form.classList.remove("appointment-animation-close");
             form.classList.add("appointment-animation-open");
             firstDate.focus();
+            if (storage) {
+                adult.value = storage;
+            }
         } else {
             form.classList.remove("appointment-animation-open");
             form.classList.add("appointment-animation-close");
@@ -29,7 +39,6 @@ if (form != null) {
         } else {
             if (isStorageSupport) {
                 localStorage.setItem("adult", adult.value);
-                localStorage.setItem("children", children.value);
             }
         }
     });

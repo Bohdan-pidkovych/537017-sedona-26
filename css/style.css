@@ -130,7 +130,7 @@ input[type="radio"].visually-hidden {
     background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
     background-position: center bottom, center -84px;
     background-repeat: no-repeat, no-repeat;
-    background-size: 100%, cover;
+    background-size: 100% 57px, cover;
     text-align: center;
 }
 
@@ -531,6 +531,7 @@ input[type="radio"].visually-hidden {
 
 .appointment-form .appointment-input-empty {
     outline: 2px solid #ff0000;
+    outline-offset: -2px;
 }
 
 .appointment-group .button-less,
@@ -1112,6 +1113,10 @@ input[type="radio"].visually-hidden {
     display: block;
     width: 115px;
     height: 41px;
+}
+
+.footer-copyright path {
+    fill: #231f20;
 }
 
 .footer-copyright a:hover path,
