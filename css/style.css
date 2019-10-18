@@ -529,9 +529,33 @@ input[type="radio"].visually-hidden {
     margin-right: 27px;
 }
 
+@keyframes error {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(-10px);
+    }
+}
+
 .appointment-form .appointment-input-empty {
     outline: 2px solid #ff0000;
     outline-offset: -2px;
+}
+
+.appointment-error {
+    animation: error 0.5s;
 }
 
 .appointment-group .button-less,
@@ -985,6 +1009,7 @@ input[type="radio"].visually-hidden {
 
 .button-detail {
     display: inline-block;
+    vertical-align: middle;
     padding: 3px 17px;
     background-color: #81b3d2;
 }
@@ -1001,6 +1026,7 @@ input[type="radio"].visually-hidden {
 
 .button-reserv {
     display: inline-block;
+    vertical-align: middle;
     margin-left: 2px;
     padding: 3px 16px;
     background-color: #766357;
@@ -1017,11 +1043,12 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item .raiting {
-    margin-left: auto;
+    min-width: 112px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    margin-left: auto;
 }
 
 .raiting-stars img {

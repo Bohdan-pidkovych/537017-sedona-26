@@ -26,6 +26,7 @@ if (form != null) {
             }
         } else {
             form.classList.remove("appointment-animation-open");
+            form.classList.remove("appointment-error");
             form.classList.add("appointment-animation-close");
             form.classList.add("appointment-hide");
         }
@@ -36,6 +37,9 @@ if (form != null) {
             for (var i = 0; i < formInput.length; i++) {
                formInput[i].classList.add("appointment-input-empty");
             }
+            form.classList.remove("appointment-error");
+            form.offsetWidth = form.offsetWidth;
+            form.classList.add("appointment-error");
         } else {
             if (isStorageSupport) {
                 localStorage.setItem("adult", adult.value);
