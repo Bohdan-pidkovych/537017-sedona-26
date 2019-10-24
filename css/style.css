@@ -55,7 +55,7 @@ input[type="radio"].visually-hidden {
 
 .main-header-logo {
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 50%;
     margin-left: -70px;
     width: 140px;
@@ -560,6 +560,7 @@ input[type="radio"].visually-hidden {
 
 .appointment-group .button-less,
 .appointment-group .button-more {
+    position: relative;
     box-sizing: border-box;
     width: 38px;
     background-color: #f2f2f2;
@@ -567,23 +568,44 @@ input[type="radio"].visually-hidden {
     cursor: pointer;
 }
 
-.button-less span,
-.button-more span {
-    font-size: 22px;
-    font-weight: 700;
-    color: #aaaaaa;
+.appointment-group .button-less::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 13px;
+    width: 12px;
+    height: 3px;
+    background-color: #aaaaaa;
 }
 
-.button-less:hover span,
-.button-less:focus span,
-.button-more:hover span,
-.button-more:focus span {
-    color: #231f20;
+.appointment-group .button-more::before,
+.appointment-group .button-more::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 13px;
+    width: 11px;
+    height: 3px;
+    background-color: #aaaaaa;
 }
 
-.button-less:active span,
-.button-more:active span {
-    color: #81b3d2;
+.appointment-group .button-more::after {
+    transform: rotate(90deg);
+}
+
+.appointment-group .button-less:hover::before,
+.appointment-group .button-less:focus::before,
+.appointment-group .button-more:hover::before,
+.appointment-group .button-more:focus::before,
+.appointment-group .button-more:hover::after,
+.appointment-group .button-more:focus::after {
+    background-color: #231f20;
+}
+
+.appointment-group .button-less:active::before,
+.appointment-group .button-more:active::before,
+.appointment-group .button-more:active::after {
+    background-color: #81b3d2;
 }
 
 .appointment-form .button-submit {

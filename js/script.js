@@ -46,4 +46,23 @@ if (form != null) {
             }
         }
     });
+    document.addEventListener("click", function (evt) {
+        if (evt.target.classList.contains("button-more")) {
+            ++evt.target.parentElement.querySelector("input").value;
+        } else if (evt.target.classList.contains("button-less") && evt.target.parentElement.querySelector("input").value > 0) {
+            --evt.target.parentElement.querySelector("input").value;
+        }
+    });
+    window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+            evt.preventDefault();
+            if (form.classList.contains("appointment-animation-open")) {
+                form.classList.remove("appointment-animation-open");
+                form.classList.add("appointment-animation-close");
+                form.classList.add("appointment-hide");
+            } else {
+                form.classList.add("appointment-hide");
+            }
+        }
+    });
 }
