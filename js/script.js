@@ -1,5 +1,6 @@
 var button = document.querySelector(".appointment-button");
 var form = document.querySelector(".appointment-container");
+
 if (form != null) {
     var firstDate = form.querySelector("[name=date-1]");
     var secondDate = form.querySelector("[name=date-2]");
@@ -20,7 +21,7 @@ if (form != null) {
             form.classList.remove("appointment-hide");           
             form.classList.remove("appointment-animation-close");
             form.classList.add("appointment-animation-open");
-            firstDate.focus();
+            setTimeout(function () {firstDate.focus();}, 2001);
             if (storage) {
                 adult.value = storage;
             }
